@@ -1,0 +1,24 @@
+﻿{
+    "run_start":  "2026-10-31T20:40:01.874+05:30",
+    "run_end":  "2026-10-31T20:40:06.011+05:30",
+    "timezone":  "Asia/Kolkata",
+    "python_path":  "D:\\Ajay\\WILP\\Sem1\\AI Augmented SDLC\\Lab\\Assignment\\AI SDLC- Assignment\\Part-1A\\src",
+    "overall":  "PASS",
+    "commands":  [
+                     {
+                         "name":  "ruff",
+                         "command":  "D:\\Ajay\\WILP\\Sem1\\AI Augmented SDLC\\Lab\\Assignment\\AI SDLC- Assignment\\Part-1A\\.venv\\Scripts\\python.exe -m ruff check src tests",
+                         "exit_code":  0
+                     },
+                     {
+                         "name":  "bandit",
+                         "command":  "D:\\Ajay\\WILP\\Sem1\\AI Augmented SDLC\\Lab\\Assignment\\AI SDLC- Assignment\\Part-1A\\.venv\\Scripts\\python.exe -m bandit -r src",
+                         "exit_code":  0
+                     },
+                     {
+                         "name":  "unittest",
+                         "command":  "D:\\Ajay\\WILP\\Sem1\\AI Augmented SDLC\\Lab\\Assignment\\AI SDLC- Assignment\\Part-1A\\.venv\\Scripts\\python.exe -m unittest discover -s tests -v",
+                         "exit_code":  0
+                     }
+                 ]
+}

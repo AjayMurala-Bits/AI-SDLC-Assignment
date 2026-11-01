@@ -1,0 +1,55 @@
+I001 [*] Import block is un-sorted or un-formatted
+ --> src\movie_booking\__main__.py:1:1
+  |
+1 | from .cli import main
+  | ^^^^^^^^^^^^^^^^^^^^^
+help: Organize imports
+  |
+2 |
+  -
+3 | if __name__ == "__main__":
+  |
+
+UP035 [*] Import from `collections.abc` instead: `Sequence`
+  --> src\movie_booking\cli.py:8:1
+   |
+ 6 | import sys
+ 7 | from pathlib import Path
+ 8 | from typing import Sequence
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ 9 |
+10 | from .booking import (
+   |
+help: Import from `collections.abc`
+  |
+7 | from pathlib import Path
+  - from typing import Sequence
+8 + from collections.abc import Sequence
+9 |
+  |
+
+SIM117 Use a single `with` statement with multiple contexts instead of nested `with` statements
+  --> tests\test_booking.py:41:13
+   |
+39 |       def test_invalid_inputs_are_rejected(self):
+40 |           for show_id, seats in (("S3", ["A1"]), ("S1", ["A11"]), ("S1", ["A1", "A1"]), ("S1", [])):
+41 | /             with self.subTest(show_id=show_id, seats=seats):
+42 | |                 with self.assertRaises(BookingError):
+   | |_____________________________________________________^
+43 |                       create_booking(self.store, show_id, seats)
+   |
+help: Combine `with` statements
+
+SIM117 Use a single `with` statement with multiple contexts instead of nested `with` statements
+  --> tests\test_storage.py:37:9
+   |
+36 |       def test_unreadable_store_is_rejected(self):
+37 | /         with tempfile.TemporaryDirectory() as directory:
+38 | |             with self.assertRaises(StorageError):
+   | |_________________________________________________^
+39 |                   load_store(Path(directory))
+   |
+help: Combine `with` statements
+
+Found 4 errors.
+[*] 2 fixable with `--fix`.

@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ruff_cache/
+.demo-store*/
+.agents/
+dist/
+*.egg-info/
+bookings.json

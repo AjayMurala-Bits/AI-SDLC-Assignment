@@ -1,0 +1,8 @@
+Capture time: 2026-10-31T20:12:40.950+05:30 (Asia/Kolkata)
+
+Get-Command python,py,python3 -ErrorAction SilentlyContinue
+where.exe python
+Get-ChildItem 'C:\Users\mail2\AppData\Local\Programs\Python' -ErrorAction SilentlyContinue
+& 'C:\Users\mail2\AppData\Local\Programs\Python\Python314\python.exe' -m venv .venv
+Get-Command winget,choco,scoop -ErrorAction SilentlyContinue
+Get-ChildItem -LiteralPath 'C:\Users\mail2' -Filter python.exe -File -Recurse -ErrorAction SilentlyContinue

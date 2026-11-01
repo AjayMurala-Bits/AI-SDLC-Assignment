@@ -1,0 +1,20 @@
+Capture time: 2026-10-31T20:20:37.589+05:30 (Asia/Kolkata)
+
+Verification command:
+$pythonPath = 'C:\Users\mail2\AppData\Local\Programs\Python\Python314\python.exe'; Test-Path -LiteralPath $pythonPath; & $pythonPath --version
+Observed: True; Python 3.14.7; exit=0.
+
+Environment command:
+& 'C:\Users\mail2\AppData\Local\Programs\Python\Python314\python.exe' -m venv .venv
+Observed: exit=0.
+
+Dependency command:
+& '.\.venv\Scripts\python.exe' -m pip install -r requirements-dev.txt
+Observed: exit=0; ruff 0.17.3 and bandit 1.9.4 installed; pip reported 26.2.1.
+
+Version commands:
+& '.\.venv\Scripts\python.exe' --version
+& '.\.venv\Scripts\python.exe' -m pip --version
+& '.\.venv\Scripts\python.exe' -m ruff --version
+& '.\.venv\Scripts\python.exe' -m bandit --version
+Observed: Python 3.14.7; pip 26.2.1; ruff 0.17.3; bandit 1.9.4.

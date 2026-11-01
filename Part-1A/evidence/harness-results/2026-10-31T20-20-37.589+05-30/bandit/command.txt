@@ -1,0 +1,1 @@
+﻿D:\Ajay\WILP\Sem1\AI Augmented SDLC\Lab\Assignment\AI SDLC- Assignment\Part-1A\.venv\Scripts\python.exe -m bandit -r src

@@ -1,0 +1,18 @@
+test_double_booking_and_multi_seat_failure_are_atomic (test_booking.BookingTests.test_double_booking_and_multi_seat_failure_are_atomic) ... ok
+test_invalid_inputs_are_rejected (test_booking.BookingTests.test_invalid_inputs_are_rejected) ... ok
+test_shows_start_with_ten_seats_and_are_independent (test_booking.BookingTests.test_shows_start_with_ten_seats_and_are_independent) ... ok
+test_successful_booking_has_exact_price (test_booking.BookingTests.test_successful_booking_has_exact_price) ... ok
+test_unknown_booking_ids_are_rejected_without_mutation (test_booking.BookingTests.test_unknown_booking_ids_are_rejected_without_mutation) ... ok
+test_view_and_cancel_booking (test_booking.BookingTests.test_view_and_cancel_booking) ... ok
+test_cli_commands_cover_booking_lifecycle (test_cli.CliTests.test_cli_commands_cover_booking_lifecycle) ... ok
+test_cli_reports_invalid_input (test_cli.CliTests.test_cli_reports_invalid_input) ... ok
+test_cli_reports_unknown_booking (test_cli.CliTests.test_cli_reports_unknown_booking) ... ok
+test_invalid_json_is_rejected (test_storage.StorageTests.test_invalid_json_is_rejected) ... ok
+test_invalid_store_shape_is_rejected (test_storage.StorageTests.test_invalid_store_shape_is_rejected) ... ok
+test_round_trip_preserves_bookings_and_ids (test_storage.StorageTests.test_round_trip_preserves_bookings_and_ids) ... ok
+test_unreadable_store_is_rejected (test_storage.StorageTests.test_unreadable_store_is_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.047s
+
+OK
