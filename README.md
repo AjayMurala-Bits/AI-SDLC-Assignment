@@ -18,6 +18,8 @@ Part-1A is complete for its approved scope. It contains:
 
 See the [Part-1A README](./Part-1A/README.md) and [quickstart](./Part-1A/specs/001-movie-ticket-booking/quickstart.md).
 
+Demo video: [Part 1A - Movie Booking CLI.mp4](./Part%201A%20-%20Movie%20Booking%20CLI.mp4).
+
 ## Part-1B — AI Application
 
 Part-1B is reserved for the AI application. Problem selection and development are pending.
