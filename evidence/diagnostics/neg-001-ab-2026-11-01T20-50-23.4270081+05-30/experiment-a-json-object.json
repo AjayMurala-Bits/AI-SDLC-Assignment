@@ -1,0 +1,105 @@
+{
+  "run_id": "2026-11-01T20-50-23.622+05-30",
+  "diagnostic_type": "neg-001-controlled-ab",
+  "experiment": "A-baseline-json-object",
+  "case_id": "NEG-001",
+  "judge_calls": 0,
+  "full_evaluation": false,
+  "sanitized_configuration": {
+    "provider": "ollama",
+    "model": "llama3.2:latest",
+    "credential_present": false,
+    "base_url": "http://127.0.0.1:11434/v1",
+    "max_input_tokens": 7000,
+    "max_output_tokens": 1200,
+    "judge_max_input_tokens": 10000,
+    "judge_max_output_tokens": 2000,
+    "reasoning_effort": "none",
+    "retries": 0
+  },
+  "input_review": "The pacing drags through the middle, and the dialogue repeats the same argument. The lighting is effective, but it cannot rescue a story that feels underdeveloped.",
+  "expected_sentiment": "negative",
+  "schema": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "summary",
+      "sentiment",
+      "positive_aspects",
+      "negative_aspects",
+      "recommendation"
+    ],
+    "properties": {
+      "summary": {
+        "type": "string"
+      },
+      "sentiment": {
+        "type": "string",
+        "enum": [
+          "mixed",
+          "negative",
+          "positive",
+          "unclear"
+        ]
+      },
+      "positive_aspects": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "maxItems": 5
+      },
+      "negative_aspects": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "maxItems": 5
+      },
+      "recommendation": {
+        "type": "string"
+      }
+    }
+  },
+  "request_configuration": {
+    "endpoint": "http://127.0.0.1:11434/v1",
+    "operation": "chat.completions.create",
+    "model": "llama3.2:latest",
+    "max_tokens": 1200,
+    "retries": 0,
+    "response_format": {
+      "type": "json_object"
+    }
+  },
+  "raw_response_content": "{\n  \"summary\": \"The film struggles with pacing and dialogue repetition, despite effective lighting.\",\n  \"sentiment\": \"mixed\",\n  \"positive_aspects\": [\n    \"effective lighting\",\n    \"original storytelling elements\",\n    \"atmospheric setting\",\n    \"strong visuals\",\n    \"creatively scored soundtrack\"\n  ],\n  \"negative_aspects\": [\n    \"pacing issues in the middle\",\n    \"repetitive dialogue\",\n    \"underdeveloped storyline\",\n    \"slow build-up\",\n    \"lack of character development\"\n  ],\n  \"recommendation\": \"With some development, this film could have potential, but currently, it's a slow and uninspired watch.\" \n}",
+  "parsed_json": {
+    "summary": "The film struggles with pacing and dialogue repetition, despite effective lighting.",
+    "sentiment": "mixed",
+    "positive_aspects": [
+      "effective lighting",
+      "original storytelling elements",
+      "atmospheric setting",
+      "strong visuals",
+      "creatively scored soundtrack"
+    ],
+    "negative_aspects": [
+      "pacing issues in the middle",
+      "repetitive dialogue",
+      "underdeveloped storyline",
+      "slow build-up",
+      "lack of character development"
+    ],
+    "recommendation": "With some development, this film could have potential, but currently, it's a slow and uninspired watch."
+  },
+  "sentiment_value": "mixed",
+  "schema_validation_errors": [],
+  "schema_valid": true,
+  "sentiment_matches_expected": false,
+  "token_usage": {
+    "input_tokens": 221,
+    "output_tokens": 143,
+    "total_tokens": 364
+  },
+  "compatibility_error": null,
+  "status": "pass"
+}

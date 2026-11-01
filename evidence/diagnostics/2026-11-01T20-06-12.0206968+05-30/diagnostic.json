@@ -1,0 +1,41 @@
+{
+  "run_id": "2026-11-01T20-06-12.218+05-30",
+  "diagnostic_type": "single-application-request",
+  "case_id": "POS-001",
+  "mode": "live-diagnostic",
+  "judge_calls": 0,
+  "full_dataset_runner": false,
+  "sanitized_configuration": {
+    "provider": "ollama",
+    "model": "llama3.2:latest",
+    "credential_present": false,
+    "base_url": "http://127.0.0.1:11434/v1",
+    "max_input_tokens": 7000,
+    "max_output_tokens": 1200,
+    "judge_max_input_tokens": 10000,
+    "judge_max_output_tokens": 2000,
+    "reasoning_effort": "none",
+    "retries": 0
+  },
+  "provider_error": null,
+  "token_usage": {
+    "input_tokens": 220,
+    "output_tokens": 109,
+    "total_tokens": 329
+  },
+  "result": {
+    "summary": "The film is a heartwarming and humorous movie with natural lead performances and a charming small-town setting.",
+    "sentiment": "positive",
+    "positive_aspects": [
+      "warm and funny tone",
+      "natural lead performances",
+      "practical sets create inviting setting",
+      "satisfying final act",
+      "inviting small-town atmosphere"
+    ],
+    "negative_aspects": [],
+    "recommendation": "A delightful, feel-good film for fans of natural storytelling"
+  },
+  "schema_errors": [],
+  "status": "success"
+}

@@ -1,0 +1,33 @@
+{
+  "run_id": "2026-11-01T19-19-47.874+05-30",
+  "diagnostic_type": "single-application-request",
+  "case_id": "POS-001",
+  "mode": "live-diagnostic",
+  "judge_calls": 0,
+  "full_dataset_runner": false,
+  "sanitized_configuration": {
+    "provider": "openai",
+    "model": "gpt-5.4-mini",
+    "credential_present": true,
+    "max_input_tokens": 7000,
+    "max_output_tokens": 1200,
+    "judge_max_input_tokens": 10000,
+    "judge_max_output_tokens": 2000,
+    "reasoning_effort": "none",
+    "retries": 0
+  },
+  "provider_error": {
+    "category": "rate_limit",
+    "status_code": 429,
+    "error_code": "credit_balance_exhausted"
+  },
+  "token_usage": null,
+  "result": {
+    "error": {
+      "type": "model_failure",
+      "message": "model request failed"
+    }
+  },
+  "schema_errors": [],
+  "status": "model_failure"
+}

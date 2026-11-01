@@ -1,0 +1,154 @@
+{
+  "run_id": "2026-11-01T20-46-22.453+05-30",
+  "diagnostic_type": "single-application-request-raw-response",
+  "case_id": "NEG-001",
+  "mode": "local-ollama-diagnostic",
+  "judge_calls": 0,
+  "full_evaluation": false,
+  "sanitized_configuration": {
+    "provider": "ollama",
+    "model": "llama3.2:latest",
+    "credential_present": false,
+    "base_url": "http://127.0.0.1:11434/v1",
+    "max_input_tokens": 7000,
+    "max_output_tokens": 1200,
+    "judge_max_input_tokens": 10000,
+    "judge_max_output_tokens": 2000,
+    "reasoning_effort": "none",
+    "retries": 0
+  },
+  "input_review": "The pacing drags through the middle, and the dialogue repeats the same argument. The lighting is effective, but it cannot rescue a story that feels underdeveloped.",
+  "expected": {
+    "outcome": "success",
+    "deterministic": {
+      "sentiment": "negative",
+      "max_aspects": 5,
+      "must_not_contain": [
+        "unwatchable",
+        "failure"
+      ]
+    },
+    "offline_output": {
+      "summary": "The review finds the film underdeveloped because its middle drags and dialogue repeats, despite effective lighting.",
+      "sentiment": "negative",
+      "positive_aspects": [
+        "Effective lighting"
+      ],
+      "negative_aspects": [
+        "Slow middle pacing",
+        "Repetitive dialogue",
+        "Underdeveloped story"
+      ],
+      "recommendation": "Skip it if repetitive dialogue and uneven pacing are deal-breakers."
+    },
+    "rubric": {
+      "version": "rubric-v1",
+      "expected_sentiment": "negative",
+      "supported_key_points": [
+        "dragging middle",
+        "repeated dialogue",
+        "effective lighting",
+        "underdeveloped story"
+      ],
+      "prohibited_unsupported_claims": [
+        "unwatchable",
+        "bad acting",
+        "commercial failure"
+      ],
+      "quality_criteria": {
+        "faithfulness": "Preserve both the criticism and the lighting concession.",
+        "coverage": "Cover the main pacing and dialogue criticisms.",
+        "uncertainty_usefulness": "Keep the recommendation conditional."
+      }
+    },
+    "offline_judge": {
+      "faithfulness": 4,
+      "coverage": 4,
+      "uncertainty_usefulness": 4,
+      "unsupported_claims": [],
+      "rationale": "The output preserves the dominant criticism and the stated concession."
+    }
+  },
+  "request_contract": {
+    "endpoint": "http://127.0.0.1:11434/v1",
+    "operation": "chat.completions.create",
+    "response_format": {
+      "type": "json_object"
+    },
+    "max_tokens": 1200
+  },
+  "schema": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "summary",
+      "sentiment",
+      "positive_aspects",
+      "negative_aspects",
+      "recommendation"
+    ],
+    "properties": {
+      "summary": {
+        "type": "string"
+      },
+      "sentiment": {
+        "type": "string",
+        "enum": [
+          "mixed",
+          "negative",
+          "positive",
+          "unclear"
+        ]
+      },
+      "positive_aspects": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "maxItems": 5
+      },
+      "negative_aspects": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "maxItems": 5
+      },
+      "recommendation": {
+        "type": "string"
+      }
+    }
+  },
+  "raw_response_content": "{\n  \"summary\": \"The film suffers from pacing issues and unengaging dialogue, despite notable cinematography.\",\n  \"sentiment\": \"Mixed\",\n  \"positive_aspects\": [\n    \"Effective cinematography\",\n    \"Good lighting\",\n    \"Potential for development\"\n  ],\n  \"negative_aspects\": [\n    \"Slow pacing through the middle\",\n    \"Dialogue feels repetitive\",\n    \"Underdeveloped story\"\n  ],\n  \"recommendation\": \"A disappointing viewing experience due to pacing and storytelling issues.\"\n}",
+  "parsed_json": {
+    "summary": "The film suffers from pacing issues and unengaging dialogue, despite notable cinematography.",
+    "sentiment": "Mixed",
+    "positive_aspects": [
+      "Effective cinematography",
+      "Good lighting",
+      "Potential for development"
+    ],
+    "negative_aspects": [
+      "Slow pacing through the middle",
+      "Dialogue feels repetitive",
+      "Underdeveloped story"
+    ],
+    "recommendation": "A disappointing viewing experience due to pacing and storytelling issues."
+  },
+  "application_result": {
+    "error": {
+      "type": "invalid_model_output",
+      "message": "sentiment is invalid"
+    }
+  },
+  "schema_validation_errors": [
+    "sentiment is invalid"
+  ],
+  "token_usage": {
+    "input_tokens": 221,
+    "output_tokens": 106,
+    "total_tokens": 327
+  },
+  "provider_error": null,
+  "status": "application_validation_failure"
+}
