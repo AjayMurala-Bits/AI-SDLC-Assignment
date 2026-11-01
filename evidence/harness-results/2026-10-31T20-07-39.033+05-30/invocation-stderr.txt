@@ -1,0 +1,1 @@
+Start-Process reported that the system could not find the file specified when the harness attempted to start each configured gate process. The errors originated at .harness/run_checks.ps1 line 21. No application test or lint/security output was produced.

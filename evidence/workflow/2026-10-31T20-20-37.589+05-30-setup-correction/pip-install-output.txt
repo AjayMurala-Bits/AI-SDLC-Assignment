@@ -1,0 +1,12 @@
+Collecting ruff<1,>=0.8 (from -r requirements-dev.txt (line 1))
+Collecting bandit<2,>=1.7 (from -r requirements-dev.txt (line 2))
+Collecting PyYAML>=5.3.1 (from bandit<2,>=1.7->-r requirements-dev.txt (line 2))
+Collecting stevedore>=1.20.0 (from bandit<2,>=1.7->-r requirements-dev.txt (line 2))
+Collecting rich (from bandit<2,>=1.7->-r requirements-dev.txt (line 2))
+Collecting colorama>=0.3.9 (from bandit<2,>=1.7->-r requirements-dev.txt (line 2))
+Collecting markdown-it-py>=2.2.0 (from rich->bandit<2,>=1.7->-r requirements-dev.txt (line 2))
+Collecting pygments<3.0.0,>=2.13.0 (from rich->bandit<2,>=1.7->-r requirements-dev.txt (line 2))
+Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich->bandit<2,>=1.7->-r requirements-dev.txt (line 2))
+Installing collected packages: stevedore, ruff, PyYAML, pygments, mdurl, colorama, markdown-it-py, rich, bandit
+Successfully installed PyYAML-6.0.3 bandit-1.9.4 colorama-0.4.6 markdown-it-py-4.2.0 mdurl-0.1.2 pygments-2.21.0 rich-15.0.0 stevedore-5.9.1 ruff-0.17.3
+exit=0
