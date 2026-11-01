@@ -40,4 +40,4 @@ python -m movie_booking --help
 
 T008, shared test fixtures, is explicitly deferred because the approved requirements and existing tests do not require shared fixtures.
 
-The demo video remains to be recorded separately.
+Demo video: [Part 1A - Movie Booking CLI.mp4](./Part%201A%20-%20Movie%20Booking%20CLI.mp4).
