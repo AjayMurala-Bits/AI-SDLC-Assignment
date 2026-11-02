@@ -2,6 +2,17 @@
 
 This repository contains both assignment parts.
 
+## Demo videos
+
+| Demo | Video |
+| --- | --- |
+| Part-1A: Movie Ticket Booking CLI | [Watch or download](./Part%201A%20-%20Movie%20Booking%20CLI.mp4) |
+| Part-1B: Movie Review Summarizer | [Watch or download](./Part%201B.mp4) |
+| Final demo | [Watch or download](./Final%20Demo.mp4) |
+
+If GitHub does not show a video preview, use **View raw** or **Download** on
+the video page.
+
 ## Part-1A — Movie Ticket Booking CLI
 
 Part-1A is complete for its approved scope. It contains the Python command-line
@@ -27,3 +38,6 @@ evaluation harness.
 
 Part-1B evidence is preserved under `Part-1B/evidence/`; student narrative logs
 and acceptance decisions must reflect actual work and observations.
+
+See the [Part-1B README](./Part-1B/README.md) for project details. Demo videos
+show application behavior and do not establish final semantic acceptance.
