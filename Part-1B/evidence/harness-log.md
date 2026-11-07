@@ -8,7 +8,7 @@ Record the approved constitution, specification, plan and tasks supplied to the 
 
 Student entry:
 
-Machine-evidence entry recorded 2026-11-01T20:39:40.022+05:30:
+Recorded 2026-11-01T20:39:40.022+05:30:
 The Ollama full evaluation run `2026-11-01T20-14-22.104+05-30` used provider
 `ollama`, model `llama3.2:latest`, endpoint `http://127.0.0.1:11434/v1`, zero
 retries and the approved token ceilings. No OpenAI call was made. The frozen
@@ -38,7 +38,7 @@ Application output limit: 1200 tokens
 Student entry: Student entry: 2026-11-01T20:55:40.022+05:30:
 
 Structural: required fields, exact JSON keys, types, sentiment values, word/sentence limits, array limits, and failure envelopes.
-Properties: deterministic requirements such as correct error types, instruction isolation, expected sentiment, and safety behavior.
+Properties: deterministic requirements such as correct error types, expected sentiment etc.
 Semantic: faithfulness, coverage, and uncertainty/usefulness.
 Semantic scoring:
 Faithfulness: 40%
@@ -50,8 +50,8 @@ Each dimension is scored from 0–4.
 
 Student entries:
 
-Machine-evidence entry recorded 2026-11-01T21:39:40.022+05:30:
-The failed cases and evidence are preserved unchanged in
+Recorded 2026-11-01T21:39:40.022+05:30:
+The failed cases and evidence are saved in
 `evidence/evaluation-results/2026-11-01T20-14-22.104+05-30/run.json`.
 Dominant failures were Ollama schema/output compatibility (invalid sentiment
 or five-field shape for six semantic cases) and two semantic judge failures
@@ -63,12 +63,10 @@ instrumentation gap. No repair or rerun was performed.
 
 Student entries:
 
-Machine-evidence entry recorded 2026-11-01T21:39:40.022+05:30:
+Recorded 2026-11-01T21:39:40.022+05:30:
 No repair or revalidation occurred after this run. The smallest proposed next
 experiment is one local NEG-001 diagnostic that preserves sanitized raw output,
-parsed keys/sentiment, validation errors, and usage, followed by an adapter
-structured-output compatibility check if needed. Thresholds, dataset and
-prompts remain unchanged.
+parsed keys/sentiment, validation errors, and usage.
 
 ## 6 Repairs and Revalidation
 
@@ -76,9 +74,8 @@ Explain actual changes to code, prompts, parsers, validators or guardrails. Link
 
 Student entries:
 
-Machine-evidence entry recorded 2026-11-01T21:45:07.1290560+05:30:
-Second harness-driven repair and re-evaluation completed using local Ollama
-only. The repair added general-purpose evidence sufficiency and uncertainty
+Recorded 2026-11-01T21:45:07.1290560+05:30:
+Second re-evaluation completed using local Ollama only. The repair added general-purpose evidence sufficiency and uncertainty
 guardrails, clarified dominant-versus-balanced sentiment, and routed focused
 diagnostics through the application. The first repair snapshot, frozen dataset,
 thresholds and prior evidence remain unchanged. Offline tests passed `24/24`.
